@@ -21,7 +21,7 @@
     }
 
     function HomePage() {
-      const names = ['Codesthenos', 'Ataraxia', 'Guillermo', 'Sara']
+      const names = ['Codesthenos', 'Ataraxia', 'Sara', 'Sara']
 
       return (
         <div>
@@ -30,8 +30,8 @@
           <Header title="ReactJS-Vercel-Course" />
 
           <ul>
-            {names.map((name) => (
-              <li key={name}>{name}</li>
+            {names.map((name, i=0) => (
+              <li key={`${i+1}${name}`}>{`User ${i+1}: ${name}`}</li>
             ))}
           </ul>
         </div>
