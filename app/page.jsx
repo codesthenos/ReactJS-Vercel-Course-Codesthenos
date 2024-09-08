@@ -1,30 +1,10 @@
-'use client'
-
-import { useState } from 'react'
+import { LikeButton } from "./like-button"
 
 function Header(props) {
   return (<h1>{props.title ? props.title : 'TITLE'}</h1>)
 }
 
 export default function HomePage() {
-  const [likes, setLikes] = useState(0)
-
-  const addLike = () => {
-    setLikes(likes + 1)
-  }
-
-  const quitLike = () => {
-    setLikes(likes - 1)
-  }
-
-  const addButtonHandler = () => {
-    addLike()
-  }
-
-  const quitButtonHandler = () => {
-    quitLike()
-  }
-
   const names = ['Codesthenos', 'Ataraxia', 'Sara', 'Sara']
 
   return (
@@ -38,11 +18,7 @@ export default function HomePage() {
           <li key={`${i+1}${name}`}>{`User ${i+1}: ${name}`}</li>
         ))}
       </ul>
-      <div>
-        <span>{likes}</span>
-      </div>
-      <button onClick={addButtonHandler}>Add Like</button>
-      <button onClick={quitButtonHandler}>Quit Like</button>
+      <LikeButton />
     </div>
   )
 }
