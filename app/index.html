@@ -16,9 +16,21 @@
   <script type="text/jsx">
     const app = document.getElementById('app')
 
-    const root = ReactDOM.createRoot(app)
+    function Header(props) {
+      return (<h1>{props.title}</h1>)
+    }
 
-    root.render(<h1>Codesthenos ReactJS-Vercel-Course</h1>)
+    function HomePage() {
+      return (
+        <div>
+          <Header title="Codesthenos"/>
+          <Header title="ReactJS-Vercel-Course" />
+        </div>
+      )
+    }
+
+    const root = ReactDOM.createRoot(app)
+    root.render(<HomePage />)
   </script>
 </body>
 </html>
