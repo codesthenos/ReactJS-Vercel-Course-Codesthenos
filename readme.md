@@ -1,3 +1,3 @@
 # ReactJS Vercel coure
 
-Course --> [(https://nextjs.org/learn/react-foundations)]
+Course --> [Course](https://nextjs.org/learn/react-foundations)
